@@ -10,7 +10,7 @@ class MoviesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.cityScreen,
+      initialRoute: AppRoutes.loadingScreen,
       routes: AppRoutes.getAppRoutes,
       theme: AppTheme.lighTheme,
       darkTheme: AppTheme.darkTheme,
