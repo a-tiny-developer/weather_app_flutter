@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'router/router.dart';
 import 'theme/theme.dart';
 
-class MoviesApp extends StatelessWidget {
-  const MoviesApp({Key? key}) : super(key: key);
+class WeatherApp extends StatelessWidget {
+  const WeatherApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

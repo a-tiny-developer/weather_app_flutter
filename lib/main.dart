@@ -2,4 +2,5 @@ import 'package:flutter/material.dart';
 
 import 'app.dart';
 
-void main() => runApp(const MoviesApp());
+void main() => runApp(const WeatherApp());
+  
