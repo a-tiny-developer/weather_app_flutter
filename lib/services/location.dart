@@ -13,15 +13,15 @@ class Location {
     return position;
   }
 
-  static Future<Weather> getCurrentWeather() async {
+  static Future<CurrentWeather> getCurrentWeather() async {
     final pos = await _getCurrentPosition();
     final url = Uri.https(_baseURl, "data/2.5/weather", {
       'lat': pos.latitude.toString(),
       'lon': pos.longitude.toString(),
       'appid': _apiKey,
+      'units': 'metric',
     });
     final response = await http.get(url);
-    final currentWeather = CurrentWeather.fromJson(response.body);
-    return currentWeather.weather[0];
+    return CurrentWeather.fromJson(response.body);
   }
 }

@@ -6,7 +6,6 @@ class AppRoutes {
   static const initialRoute = 'home';
   static const locationScreen = 'location';
   static const cityScreen = 'city';
-  static const loadingScreen = 'loading';
 
   static const screensOptions = <_ScreenRoute>[
     _ScreenRoute(
@@ -20,10 +19,6 @@ class AppRoutes {
     _ScreenRoute(
       route: cityScreen,
       screen: CityScreen(),
-    ),
-    _ScreenRoute(
-      route: loadingScreen,
-      screen: LoadingScreen(),
     ),
   ];
 
