@@ -95,8 +95,8 @@ class Main {
     required this.tempMax,
     required this.pressure,
     required this.humidity,
-    required this.seaLevel,
-    required this.grndLevel,
+    this.seaLevel,
+    this.grndLevel,
   });
 
   double temp;
@@ -105,8 +105,8 @@ class Main {
   double tempMax;
   int pressure;
   int humidity;
-  int seaLevel;
-  int grndLevel;
+  int? seaLevel;
+  int? grndLevel;
 
   factory Main.fromJson(String str) => Main.fromMap(json.decode(str));
 
@@ -169,12 +169,12 @@ class Wind {
   Wind({
     required this.speed,
     required this.deg,
-    required this.gust,
+    this.gust,
   });
 
   double speed;
   int deg;
-  double gust;
+  double? gust;
 
   factory Wind.fromJson(String str) => Wind.fromMap(json.decode(str));
 
