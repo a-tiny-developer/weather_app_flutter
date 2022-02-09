@@ -38,6 +38,7 @@ class _CityScreenState extends State<CityScreen> {
               Container(
                 padding: const EdgeInsets.all(20),
                 child: TextField(
+                  style: const TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                     icon: Icon(Icons.location_city),
                     hintText: 'Enter City Name',
