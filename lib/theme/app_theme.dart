@@ -16,15 +16,15 @@ class AppTheme {
   static const buttonTextStyle = TextStyle(
     fontSize: 30.0,
     fontFamily: 'Spartan MB',
-    color: Colors.white,
   );
 
   static final ThemeData lighTheme = ThemeData.light().copyWith(
     primaryColor: primary,
     inputDecorationTheme: const InputDecorationTheme(
       filled: true,
-      fillColor: Colors.white,
-      iconColor: Colors.white,
+      fillColor: Colors.black,
+      iconColor: Colors.black,
+      hintStyle: TextStyle(color: Colors.white),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(10),
@@ -39,6 +39,18 @@ class AppTheme {
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
     primaryColor: primary,
+    inputDecorationTheme: const InputDecorationTheme(
+      filled: true,
+      fillColor: Colors.white,
+      iconColor: Colors.white,
+      hintStyle: TextStyle(color: Colors.black),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
+        ),
+        borderSide: BorderSide.none,
+      ),
+    ),
     // textTheme: darkTextTheme,
   );
 

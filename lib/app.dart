@@ -12,8 +12,7 @@ class WeatherApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.locationScreen,
       routes: AppRoutes.getAppRoutes,
-      theme: AppTheme.lighTheme,
-      darkTheme: AppTheme.darkTheme,
+      theme: AppTheme.darkTheme,
     );
   }
 }

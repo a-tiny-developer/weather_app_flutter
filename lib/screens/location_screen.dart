@@ -71,7 +71,7 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               Expanded(
                 child: StreamBuilder<CurrentWeather?>(
-                  stream: Location.currentWeatherSream,
+                  stream: Location.currentWeatherStream,
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting ||
                         snapshot.error is StreamBuilderProgress) {

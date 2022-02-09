@@ -10,7 +10,7 @@ class Location {
 
   static final currentWeatherController =
       StreamController<CurrentWeather?>.broadcast();
-  static final currentWeatherSgream = currentWeatherController.stream;
+  static final currentWeatherStream = currentWeatherController.stream;
 
   static Future<Position> _getCurrentPosition() async {
     final Position position = await Geolocator.getCurrentPosition(
