@@ -5,7 +5,7 @@ class AppTheme {
 
   static const tempTextStyle = TextStyle(
     fontFamily: 'Spartan MB',
-    fontSize: 90.0,
+    fontSize: 85.0,
   );
 
   static const messageTextStyle = TextStyle(
@@ -16,10 +16,6 @@ class AppTheme {
   static const buttonTextStyle = TextStyle(
     fontSize: 30.0,
     fontFamily: 'Spartan MB',
-  );
-
-  static const conditionTextStyle = TextStyle(
-    fontSize: 90.0,
   );
 
   static final ThemeData lighTheme = ThemeData.light().copyWith(

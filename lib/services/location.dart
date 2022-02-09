@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:geolocator/geolocator.dart';
 import 'package:clima_flutter/services/services.dart';
@@ -9,7 +10,7 @@ class Location {
   static const _baseURl = 'api.openweathermap.org';
 
   static final currentWeatherController =
-      StreamController<CurrentWeather>.broadcast();
+      StreamController<CurrentWeather?>.broadcast();
   static final currentWeatherSream = currentWeatherController.stream;
 
   static Future<Position> _getCurrentPosition() async {
@@ -33,8 +34,15 @@ class Location {
 
   static Future<void> updateCurrentWeather() async {
     currentWeatherController.addError(StreamBuilderProgress());
-    currentWeatherController.add(await getCurrentWeather());
+
+    try {
+      currentWeatherController.add(await getCurrentWeather());
+    } catch (_) {
+      currentWeatherController.addError(ResponseError);
+    }
   }
 }
 
 class StreamBuilderProgress extends Error {}
+
+class ResponseError extends Error {}

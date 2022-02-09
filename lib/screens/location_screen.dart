@@ -53,7 +53,6 @@ class _LocationScreenState extends State<LocationScreen> {
                       iconSize: 50,
                       onPressed: () {
                         Location.updateCurrentWeather();
-                        setState(() {});
                       },
                       icon: const Icon(Icons.near_me),
                     ),
@@ -71,20 +70,26 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               Expanded(
-                child: StreamBuilder<CurrentWeather>(
+                child: StreamBuilder<CurrentWeather?>(
                   stream: Location.currentWeatherSream,
                   builder: (context, snapshot) {
-                    if (!snapshot.hasData) {
+                    if (snapshot.connectionState == ConnectionState.waiting ||
+                        snapshot.error is StreamBuilderProgress) {
                       return const Spin();
                     }
-                    final data = snapshot.data!;
-                    final temp = data.main.temp;
-                    final weatherIcon = WeatherModel.getWeatherIcon(
-                      data.weather[0].id,
-                    );
-                    final weatherMessage =
-                        WeatherModel.getMessage(temp.toInt());
-                    final city = data.name;
+                    var temp = 0.0;
+                    var weatherIcon = '❌';
+                    var weatherMessage = "Error";
+                    var city = '';
+                    if (snapshot.hasData) {
+                      final data = snapshot.data!;
+                      temp = data.main.temp;
+                      weatherIcon = WeatherModel.getWeatherIcon(
+                        data.weather[0].id,
+                      );
+                      weatherMessage = WeatherModel.getMessage(temp.toInt());
+                      city = data.name;
+                    }
                     return Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
