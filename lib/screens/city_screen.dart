@@ -1,3 +1,4 @@
+import 'package:clima_flutter/services/location.dart';
 import 'package:clima_flutter/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class CityScreen extends StatefulWidget {
 }
 
 class _CityScreenState extends State<CityScreen> {
+  var city = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,10 +37,21 @@ class _CityScreenState extends State<CityScreen> {
               ),
               Container(
                 padding: const EdgeInsets.all(20),
-                child: null,
+                child: TextField(
+                  decoration: const InputDecoration(
+                    icon: Icon(Icons.location_city),
+                    hintText: 'Enter City Name',
+                  ),
+                  onChanged: (value) {
+                    city = value;
+                  },
+                ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pop(context);
+                  Location.updateCurrentWeather(city);
+                },
                 child: const Text(
                   'Get Weather',
                   style: AppTheme.buttonTextStyle,

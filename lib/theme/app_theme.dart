@@ -5,7 +5,7 @@ class AppTheme {
 
   static const tempTextStyle = TextStyle(
     fontFamily: 'Spartan MB',
-    fontSize: 85.0,
+    fontSize: 82.0,
   );
 
   static const messageTextStyle = TextStyle(
@@ -16,10 +16,22 @@ class AppTheme {
   static const buttonTextStyle = TextStyle(
     fontSize: 30.0,
     fontFamily: 'Spartan MB',
+    color: Colors.white,
   );
 
   static final ThemeData lighTheme = ThemeData.light().copyWith(
     primaryColor: primary,
+    inputDecorationTheme: const InputDecorationTheme(
+      filled: true,
+      fillColor: Colors.white,
+      iconColor: Colors.white,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
+        ),
+        borderSide: BorderSide.none,
+      ),
+    ),
     // textTheme: lightTextTheme,
   );
 
