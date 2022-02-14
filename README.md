@@ -1,16 +1,11 @@
-# clima_flutter
+# Weather app - Flutter
 
-A new Flutter project.
+Simple app to learn Flutter
 
-## Getting Started
+App from [Flutter: Tu guía completa de desarrollo para IOS y Android](https://www.udemy.com/course/flutter-ios-android-fernando-herrera/)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+https://user-images.githubusercontent.com/93559957/153790423-115e98fb-acf5-4459-9871-36957cc27e41.mp4
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://user-images.githubusercontent.com/93559957/153790434-0f977b37-b55e-47c9-ad42-29367090d565.mp4
