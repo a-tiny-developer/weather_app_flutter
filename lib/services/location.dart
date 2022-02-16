@@ -5,7 +5,7 @@ import 'package:clima_flutter/services/services.dart';
 import 'package:http/http.dart' as http;
 
 class Location {
-  static const _apiKey = 'd9fef39db70df40005846c93a1725360';
+  static const _apiKey = 'API_KEY';
   static const _baseURl = 'api.openweathermap.org';
 
   static final currentWeatherController =
